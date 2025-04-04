@@ -2,11 +2,17 @@ pipeline {
     agent {
         label 'AGENT-1'
     }
+    options{
+        timeout(time: 10, unit: 'MINUTES')
+        disableConcurrentBuilds()
+        //retry(1)
+    }
 
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
+           steps {
+                sh 'echo This is Build'
+                //sh 'sleep 10'
             }
         }
         stage('Test') {
