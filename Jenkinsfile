@@ -2,11 +2,7 @@ pipeline {
     agent {
         label 'AGENT-1'
     }
-    // options{
-    //     timeout(time: 10, unit: 'MINUTES')
-    //     disableConcurrentBuilds()
-    //     //retry(1)
-    // }
+    
 
     stages {
         stage('Build') {
@@ -30,7 +26,7 @@ pipeline {
  post {
         always{
             echo "This sections runs always"
-            deleteDir()
+            
         }
         success{
             echo "This section run when pipeline success"
