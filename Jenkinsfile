@@ -49,7 +49,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
-      }
+ }
     
  post {
         always{
