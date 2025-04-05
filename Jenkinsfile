@@ -18,8 +18,6 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
      }
-    
-
     stages {
         stage('Build') {
            steps {
@@ -36,13 +34,13 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'echo Deploying....'
-               error 'pipeline failed'
+               //error 'pipeline failed'
             }
         }
     
 
-    stages {
-        stage('Example') {
+      stages {
+        stage('Print Params') {
             steps {
                 echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
