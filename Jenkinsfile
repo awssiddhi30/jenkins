@@ -25,6 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'echo Deploying....'
+               error 'pipeline failed'
             }
         }
     }
