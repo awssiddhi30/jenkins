@@ -39,7 +39,7 @@ pipeline {
                error 'pipeline failed'
             }
         }
-    }
+    
 
     stages {
         stage('Example') {
@@ -55,8 +55,8 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
+      }
     }
-
  post {
         always{
             echo "This sections runs always"
