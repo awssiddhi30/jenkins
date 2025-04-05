@@ -1,24 +1,22 @@
 pipeline {
-    agent {
-        label 'AGENT-1'
-    }
+    agent any
     
 
     stages {
         stage('Build') {
            steps {
                 sh 'echo This is Build'
-                //sh 'sleep 10'
+                
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+               sh 'echo Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+               sh 'echo Deploying....'
             }
         }
     }
