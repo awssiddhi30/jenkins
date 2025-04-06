@@ -37,9 +37,6 @@ pipeline {
                error 'pipeline failed'
             }
         }
-    
-
-    stages {
         stage('Print Params') {
             steps {
                 echo "Hello ${params.PERSON}"
@@ -51,7 +48,7 @@ pipeline {
         }
       }
     }
-} 
+ 
 
  post {
         always{
