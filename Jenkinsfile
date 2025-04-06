@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'echo Deploying....'
-               //error 'pipeline failed'
+               error 'pipeline failed'
             }
         }
     
@@ -49,7 +49,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
- }
+      }
     
  post {
         always{
